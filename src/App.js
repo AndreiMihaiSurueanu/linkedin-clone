@@ -4,7 +4,12 @@ import "./App.css";
 function App() {
   return (
     // BEM naming convention
-    <div className="app"></div>
+    <div className="app">
+      {/* Header */}
+      {/* Sidebar */}
+      {/* Feed */}
+      {/* Widgets */}
+    </div>
   );
 }
 
