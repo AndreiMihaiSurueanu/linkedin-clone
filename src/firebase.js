@@ -3,6 +3,7 @@ import { initializeApp } from "firebase/app";
 import {
   getFirestore,
   collection,
+  onSnapshot,
   addDoc,
   serverTimestamp,
 } from "firebase/firestore";
@@ -27,6 +28,7 @@ const db = getFirestore();
 export {
   db,
   collection,
+  onSnapshot,
   addDoc,
   serverTimestamp,
 };

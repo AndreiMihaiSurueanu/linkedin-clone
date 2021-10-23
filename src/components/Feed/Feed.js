@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 // Firebase
 import * as fb from "../../firebase";
 // Components
@@ -18,6 +18,19 @@ import "./Feed.css";
 function Feed() {
   const [input, setInput] = useState("");
   const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    fb.onSnapshot(
+      fb.collection(fb.db, "posts"),
+      (snapshot) =>
+        setPosts(
+          snapshot.docs.map((doc) => ({
+            id: doc.id,
+            data: doc.data(),
+          }))
+        )
+    );
+  }, []);
 
   const sendPost = (e) => {
     e.preventDefault();
