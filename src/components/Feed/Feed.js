@@ -1,6 +1,7 @@
 import React from "react";
 // Components
 import InputOption from "../InputOption/InputOption";
+import Post from "../Post/Post";
 // Icons
 import {
   CalendarViewDay,
@@ -38,6 +39,12 @@ function Feed() {
           />
         </div>
       </div>
+          <Post
+            name="Name"
+            description="Description"
+            message="Message"
+            photoUrl=""
+          />
     </div>
   );
 }
