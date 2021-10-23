@@ -21,7 +21,7 @@ function Feed() {
 
   useEffect(() => {
     fb.onSnapshot(
-      fb.collection(fb.db, "posts"),
+      fb.query(fb.collection(fb.db, "posts"), fb.orderBy("timestamp", "desc")),
       (snapshot) =>
         setPosts(
           snapshot.docs.map((doc) => ({
