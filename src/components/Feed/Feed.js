@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+// Firebase
+import * as fb from "../../firebase";
 // Components
 import InputOption from "../InputOption/InputOption";
 import Post from "../Post/Post";
@@ -14,10 +16,20 @@ import {
 import "./Feed.css";
 
 function Feed() {
+  const [input, setInput] = useState("");
   const [posts, setPosts] = useState([]);
 
   const sendPost = (e) => {
     e.preventDefault();
+
+    fb.addDoc(fb.collection(fb.db, "posts"), {
+      name: "Name",
+      description: "Description",
+      message: input,
+      photoUrl: "",
+      timestamp: fb.serverTimestamp(),
+    });
+    setInput("");
   };
 
   return (
@@ -27,6 +39,8 @@ function Feed() {
           <Create />
           <form>
             <input
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
               type="text"
             />
             <button onClick={sendPost} type="submit">
