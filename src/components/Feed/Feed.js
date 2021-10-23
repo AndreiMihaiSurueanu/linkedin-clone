@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 // Components
 import InputOption from "../InputOption/InputOption";
 import Post from "../Post/Post";
@@ -14,6 +14,12 @@ import {
 import "./Feed.css";
 
 function Feed() {
+  const [posts, setPosts] = useState([]);
+
+  const sendPost = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <div className="feed">
       <div className="feed__inputContainer">
@@ -23,7 +29,7 @@ function Feed() {
             <input
               type="text"
             />
-            <button type="submit">
+            <button onClick={sendPost} type="submit">
               Send
             </button>
           </form>
@@ -39,7 +45,10 @@ function Feed() {
           />
         </div>
       </div>
-          <Post
+    {posts.map((post) => (
+      <Post />
+    ))}
+        <Post
             name="Name"
             description="Description"
             message="Message"
