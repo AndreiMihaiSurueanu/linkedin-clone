@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from "react";
+// Redux
+import { useSelector } from "react-redux";
+import { selectUser } from "../../features/userSlice";
 // Firebase
 import * as fb from "../../firebase";
 // Components
@@ -16,6 +19,8 @@ import {
 import "./Feed.css";
 
 function Feed() {
+  const user = useSelector(selectUser);
+
   const [input, setInput] = useState("");
   const [posts, setPosts] = useState([]);
 
@@ -36,10 +41,10 @@ function Feed() {
     e.preventDefault();
 
     fb.addDoc(fb.collection(fb.db, "posts"), {
-      name: "Name",
-      description: "Description",
+      name: user.displayName,
+      description: user.email,
       message: input,
-      photoUrl: "",
+      photoUrl: user.photoUrl || "",
       timestamp: fb.serverTimestamp(),
     });
     setInput("");
