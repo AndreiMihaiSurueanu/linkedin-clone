@@ -9,6 +9,11 @@ import {
   orderBy,
   serverTimestamp,
 } from "firebase/firestore";
+import {
+  getAuth,
+  updateProfile,
+  createUserWithEmailAndPassword,
+} from "firebase/auth";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -27,12 +32,17 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 const db = getFirestore();
+const auth = getAuth();
+
 export {
   db,
+  auth,
   collection,
   onSnapshot,
   addDoc,
   query,
   orderBy,
   serverTimestamp,
+  updateProfile,
+  createUserWithEmailAndPassword,
 };
