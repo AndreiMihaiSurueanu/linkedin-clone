@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 // Redux
-import { useSelector } from "react-redux";
-import { selectUser } from "./features/userSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { login, logout, selectUser } from "./features/userSlice";
+// Firebase
+import * as fb from "./firebase";
 // Components
 import Header from "./components/Header/Header";
 import Sidebar from "./components/Sidebar/Sidebar";
@@ -13,6 +15,26 @@ import "./App.css";
 
 function App() {
   const user = useSelector(selectUser);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    fb.onAuthStateChanged(fb.auth, (userAuth) => {
+      if (userAuth) {
+        dispatch(
+          login({
+            email: userAuth.email,
+            uid: userAuth.uid,
+            displayName: userAuth.displayName,
+            photoUrl: userAuth.photoUrl,
+          })
+        );
+      } else {
+        dispatch(logout());
+      }
+    });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     // BEM naming convention
     <div className="app">
