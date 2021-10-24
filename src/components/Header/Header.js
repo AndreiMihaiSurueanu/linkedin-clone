@@ -42,7 +42,7 @@ function Header() {
         <HeaderOption Icon={BusinessCenter} title="Jobs" />
         <HeaderOption Icon={Sms} title="Messaging" />
         <HeaderOption Icon={Notifications} title="Notifications" />
-        <HeaderOption avatar="http://tny.im/pQo" title="Me" onClick={logoutOfApp} />
+        <HeaderOption avatar={true} title="Me" onClick={logoutOfApp} />
         <div className="header__border" />
         <HeaderOption Icon={Apps} title="Work" />
         <p>Try premium account for free</p>
