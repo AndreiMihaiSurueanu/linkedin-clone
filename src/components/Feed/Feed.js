@@ -7,6 +7,7 @@ import * as fb from "../../firebase";
 // Components
 import InputOption from "../InputOption/InputOption";
 import Post from "../Post/Post";
+import FlipMove from "react-flip-move";
 // Icons
 import {
   CalendarViewDay,
@@ -77,6 +78,7 @@ function Feed() {
           />
         </div>
       </div>
+      <FlipMove>
         {posts.map(({ id, data: { name, description, message, photoUrl } }) => (
           <Post
             key={id}
@@ -86,6 +88,7 @@ function Feed() {
             photoUrl={photoUrl}
           />
         ))}
+      </FlipMove>
     </div>
   );
 }
