@@ -1,4 +1,9 @@
 import React from "react";
+// Redux
+import { useDispatch } from "react-redux";
+import { logout } from "../../features/userSlice";
+// Firebase
+import * as fb from "../../firebase";
 // Components
 import HeaderOption from "../HeaderOption/HeaderOption";
 // Styles
@@ -15,6 +20,13 @@ import {
 } from "@material-ui/icons";
 
 function Header() {
+  const dispatch = useDispatch();
+
+  const logoutOfApp = () => {
+    dispatch(logout());
+    fb.signOut(fb.auth);
+  };
+
   return (
     <div className="header">
       <div className="header__left">
@@ -30,7 +42,7 @@ function Header() {
         <HeaderOption Icon={BusinessCenter} title="Jobs" />
         <HeaderOption Icon={Sms} title="Messaging" />
         <HeaderOption Icon={Notifications} title="Notifications" />
-        <HeaderOption avatar="http://tny.im/pQo" title="Me" />
+        <HeaderOption avatar="http://tny.im/pQo" title="Me" onClick={logoutOfApp} />
         <div className="header__border" />
         <HeaderOption Icon={Apps} title="Work" />
         <p>Try premium account for free</p>

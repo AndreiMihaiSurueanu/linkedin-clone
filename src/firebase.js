@@ -14,6 +14,7 @@ import {
   updateProfile,
   createUserWithEmailAndPassword,
   onAuthStateChanged,
+  signOut,
 } from "firebase/auth";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -47,4 +48,5 @@ export {
   updateProfile,
   createUserWithEmailAndPassword,
   onAuthStateChanged,
+  signOut,
 };
