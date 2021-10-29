@@ -54,7 +54,7 @@ The project is online:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img align='center' alt="CI/CD" width="120px" src="./images/m (2).png"/>
 
-* CI/CD pipeline &nbsp;&nbsp;&nbsp; 
+* Material UI &nbsp;&nbsp;&nbsp; 
 </h1> 
 </br>
 
