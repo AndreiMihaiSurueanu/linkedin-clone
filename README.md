@@ -10,9 +10,11 @@ This project cosists of a **React** app ⚛️ Which has as a theme, *The Linked
 
 # Demo
 
-The project is hosted at:
+The project is online:
 
-https://linkedin-clone9.web.app/
+<h2>
+
+[LIVE DEMO HERE](https://linkedin-clone9.web.app/)
 
 <br>
 
@@ -58,6 +60,7 @@ https://linkedin-clone9.web.app/
     <img alt="LinkedIn clone Login page"  src="./images/l.png"/>
 </p>
 
+<br>
 
 # CI/CD
 
