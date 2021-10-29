@@ -12,7 +12,7 @@ This project cosists of a **React** app ⚛️ Which has as a theme, *The Linked
 
 The project is online:
 
-<h2>
+<h3>
 
 [LIVE DEMO HERE](https://linkedin-clone9.web.app/)
 
