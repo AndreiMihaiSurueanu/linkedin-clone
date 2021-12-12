@@ -22,12 +22,12 @@ import {
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCUYyRxPuIeW6S3OCRIwMUyB3l-YWai4xs",
-  authDomain: "linkedin-clone9.firebaseapp.com",
-  projectId: "linkedin-clone9",
-  storageBucket: "linkedin-clone9.appspot.com",
-  messagingSenderId: "167120131386",
-  appId: "1: 167120131386: web: 4a05428ba1c7692840ac03",
+  apiKey: "AIzaSyAsN-NRC3iArMfE0gypNuDbMyLDu5CJsr4",
+  authDomain: "clone-projects-9.firebaseapp.com",
+  projectId: "clone-projects-9",
+  storageBucket: "clone-projects-9.appspot.com",
+  messagingSenderId: "174316682985",
+  appId: "1:174316682985:web:cd52f02a8cb0c9136dba78"
 };
 
 // Initialize Firebase
