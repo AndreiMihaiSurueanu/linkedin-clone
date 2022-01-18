@@ -14,7 +14,7 @@ The project is online:
 
 <h3>
 
-[LIVE DEMO HERE](https://linkedin-clone9.web.app/)
+[LIVE DEMO HERE](https://linked-in-clone9.web.app/)
 
 <br>
 
